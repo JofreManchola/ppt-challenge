@@ -1,14 +1,3 @@
-### Create a new program
-POST http://localhost:3000/programs
-Content-Type: application/json
-
-{
-    "id": 9461,
-    "name": "Program 9461",
-    "description": "{\"key\":\"value2\"}",
-    "price": 100
-}
-
 ### Upload a new program
 POST http://localhost:3000/programs/upload
 Content-Type: multipart/form-data; boundary=boundary123
@@ -18,7 +7,7 @@ Content-Disposition: form-data; name="file"; filename="data.json"
 Content-Type: application/json
 
 {
-  "ProgramID": 11,
+  "ProgramID": 117,
   "ProgramName": "Dupixent MyWay Copay Card",
   "TherapeuticAreas": [
     "Asthma",
@@ -18066,4 +18055,4 @@ Content-Type: application/json
 --boundary123--
 
 ### Get a particular program
-GET http://localhost:3000/programs/11
+GET http://localhost:3000/programs/117

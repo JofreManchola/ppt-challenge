@@ -46,7 +46,21 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Good to know to test and evaluate this project
+
+### Assumptions and restrictions
+0. This project was developed on Nestjs,a backend framework that uses Express.
+1. I tried to follow the rules, so I didn't spend more than 8 hours in this development.
+2. In a production environment, the data source should use a document-oriented database, but for the easiest test and delivery, I prefer using SQLite in this version.
+3. The architecture is prepared to add a query method, but I haven't implemented it yet.
+4. Before using this project in production the synchronization flag in the ORM setup must be disabled.
+5. Everything that I identified to improve in further versions was marked with TODO comments to understand the exact place where the change is supposed to be done.
+6. The ETL is available as a POST request but Nestjs disposes the mechanism to run the same method as cron. This is not implemented yet.
+7. Several restrictions were added based on Nestjs framework capabilities. That together with the typing constrains most of the clean data and standardization requirements developed.
+8. Sample requests were developed in the file `src/programs/requests.http`, to execute those tests you need the `VSCode REST Client Extension`. There you will find the POST for adding a new program to the database and the find method to retrieve any program in the database.
+
 ## Run tests
+Even though the test commands are here (by default), there is not any relevant test developed yet.
 
 ```bash
 # unit tests
@@ -84,16 +98,6 @@ Check out a few resources that may come in handy when working with NestJS:
 - Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
 - To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
 - Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 

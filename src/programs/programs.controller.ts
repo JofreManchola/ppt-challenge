@@ -1,6 +1,6 @@
 import {
   BadRequestException,
-  Body,
+  // Body,
   Controller,
   Get,
   NotFoundException,
@@ -9,7 +9,7 @@ import {
   UploadedFile,
   UseInterceptors,
 } from '@nestjs/common';
-import { CreateProgramDto } from './dtos/create-program.dto';
+// import { CreateProgramDto } from './dtos/create-program.dto';
 import { ProgramsService } from './programs.service';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { UploadProgramDto } from './dtos/upload-program.dto';
@@ -23,11 +23,14 @@ export class ProgramsController {
     console.log('ProgramsController created');
   }
 
-  @Post()
-  createProgram(@Body() body: CreateProgramDto) {
-    console.log('POST createProgram');
-    return this.programsService.createProgram(body);
-  }
+  /**
+   * Deprecated. This was a early version of the createProgram method.
+   */
+  // @Post()
+  // createProgram(@Body() body: CreateProgramDto) {
+  //   console.log('POST createProgram');
+  //   return this.programsService.createProgram(body);
+  // }
 
   @Post('upload')
   @UseInterceptors(FileInterceptor('file'))
