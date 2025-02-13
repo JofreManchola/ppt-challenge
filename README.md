@@ -33,6 +33,15 @@ $ nvm use v22.13.1
 $ npm install
 ```
 
+## .env file
+Create a file called `.env` at the project root with the next variable.
+
+```
+OPENAI_API_KEY=your_actual_openai_api_key_here
+```
+
+> Note: The AI feature is not finished yet.
+
 ## Compile and run the project
 
 ```bash
